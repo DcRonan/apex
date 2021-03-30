@@ -1,26 +1,20 @@
 const defaultState = {
   loggedIn: false,
-  user: '',
+  user: {},
 };
 
 const userReducer = (state = defaultState, action) => {
   switch (action.type) {
-    case 'ADD_NEW_USER':
+    case 'SET_USER':
       return {
-        ...state,
         loggedIn: true,
-        user: action.payload,
+        user: { ...action.payload },
       };
-    case 'LOGIN_NEW_USER':
+    case 'LOG_OUT':
+      localStorage.clear();
       return {
-        ...state,
-        loggedIn: true,
-        user: action.payload,
-      };
-    case 'LOGOUT_USER':
-      return {
-        ...state,
         loggedIn: false,
+        user: {},
       };
     default:
       return state;

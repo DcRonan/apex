@@ -4,11 +4,11 @@ import Login from './Login';
 import SignUp from './SignUp';
 
 const App = () => {
-  const user = useSelector(state => state.user);
+  const users = useSelector(state => state.user);
 
   return (
     <div className="App">
-      {!user.loggedIn ? (
+      {!users.loggedIn ? (
         <div>
           <h1>Sign Up or Login!</h1>
           <SignUp />
@@ -17,7 +17,7 @@ const App = () => {
       ) : (
         <h1>
           Welcome,
-          {user.user.username}
+          {users.user.username}
         </h1>
       )}
     </div>

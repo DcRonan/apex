@@ -1,10 +1,17 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Login from './Login';
 import SignUp from './SignUp';
+import { autoLogin, logUserOut } from '../actions';
 
 const App = () => {
   const users = useSelector(state => state.user);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(autoLogin());
+  }, []);
 
   return (
     <div className="App">
@@ -15,10 +22,15 @@ const App = () => {
           <Login />
         </div>
       ) : (
-        <h1>
-          Welcome,
-          {users.user.username}
-        </h1>
+        <div>
+          <h1>
+            Welcome,
+            {users.user.username}
+          </h1>
+          <button type="button" onClick={() => dispatch(logUserOut())}>
+            LOG OUT
+          </button>
+        </div>
       )}
     </div>
   );

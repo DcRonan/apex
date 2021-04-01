@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { fetchUser } from '../actions';
 
@@ -17,13 +17,12 @@ const Login = () => {
       password,
     };
 
-    if (username === '' || password === '') return toast('username or password blank');
+    if (username === '' || password === '') return toast.error('username or password blank');
     return dispatch(fetchUser(userInfo));
   };
 
   return (
     <div>
-      <ToastContainer />
       <h1>Login Form</h1>
       <form onSubmit={onSubmit}>
         <input

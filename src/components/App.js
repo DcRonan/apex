@@ -2,15 +2,18 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Login from './Login';
 import SignUp from './SignUp';
-import { autoLogin, logUserOut } from '../actions';
+import { autoLogin, fetchSport } from '../actions';
+import Home from './Home';
 
 const App = () => {
   const users = useSelector(state => state.user);
+  const sports = useSelector(state => state.sport);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(autoLogin());
+    dispatch(fetchSport(sports));
   }, []);
 
   return (
@@ -22,15 +25,7 @@ const App = () => {
           <Login />
         </div>
       ) : (
-        <div>
-          <h1>
-            Welcome,
-            {users.user.username}
-          </h1>
-          <button type="button" onClick={() => dispatch(logUserOut())}>
-            LOG OUT
-          </button>
-        </div>
+        <Home />
       )}
     </div>
   );

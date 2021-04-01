@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 const setUser = payload => ({ type: 'SET_USER', payload });
 
 export const logUserOut = () => ({ type: 'LOG_OUT' });
@@ -47,4 +49,22 @@ export const autoLogin = () => dispatch => {
       localStorage.setItem('token', data.token);
       dispatch(setUser(data.user));
     });
+};
+
+export const fetchSport = () => async dispatch => {
+  try {
+    dispatch({
+      type: 'FETCH_SPORT_REQUEST',
+    });
+    const response = await axios.get('http://localhost:4000/api/v1/sports');
+
+    dispatch({
+      type: 'FETCH_SPORT_SUCCESS',
+      payload: response.data,
+    });
+  } catch (e) {
+    dispatch({
+      type: 'STOCK_LIST_FAIL',
+    });
+  }
 };

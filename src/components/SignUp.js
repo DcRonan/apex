@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
 import { signUserUp } from '../actions';
 
@@ -15,7 +16,8 @@ const SignUp = () => {
       password,
     };
 
-    dispatch(signUserUp(userInfo));
+    if (username === '' || password === '') return toast.error('username or password blank');
+    return dispatch(signUserUp(userInfo));
   };
 
   return (

@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import Login from './Login';
 import SignUp from './SignUp';
-import { autoLogin, fetchSport } from '../actions';
+import { fetchSport } from '../actions';
 import Home from './Home';
 
 const App = () => {
@@ -13,7 +13,6 @@ const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(autoLogin());
     dispatch(fetchSport(sports));
   }, []);
 
@@ -26,9 +25,7 @@ const App = () => {
           <SignUp />
           <Login />
         </div>
-      ) : (
-        <Home />
-      )}
+      ) : <Home />}
     </div>
   );
 };

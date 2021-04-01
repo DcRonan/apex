@@ -3,10 +3,10 @@ import axios from 'axios';
 
 const AddSport = () => {
   const [nameValue, setName] = useState('');
-  const [minutesValue, setMinutes] = useState(0);
-  const [secondsValue, setSeconds] = useState(0);
-  const [hoursValue, setHours] = useState(0);
-  const [distanceValue, setDistance] = useState(0);
+  const [minutesValue, setMinutes] = useState();
+  const [secondsValue, setSeconds] = useState();
+  const [hoursValue, setHours] = useState();
+  const [distanceValue, setDistance] = useState();
   const [notesValue, setNotes] = useState('');
 
   const onSubmit = e => {
@@ -24,7 +24,7 @@ const AddSport = () => {
 
   return (
     <div>
-      <h1>SignUp Form</h1>
+      <h1>Add sport</h1>
       <form onSubmit={onSubmit}>
         <input
           type="text"

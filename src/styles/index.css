@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Nimbus Light';
+  src: local('Nimbus Light'), url(../fonts/Nimbus-Light.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Nimbus Bold';
+  src: local('Nimbus Bold'), url(../fonts/Nimbus-Bold.otf) format('truetype');
+}

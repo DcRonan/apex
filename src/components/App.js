@@ -19,13 +19,13 @@ const App = () => {
   return (
     <div className="App">
       <ToastContainer />
-      {!users.loggedIn ? (
+      {users.loggedIn ? (
         <div>
           <h1>Sign Up or Login!</h1>
           <SignUp />
           <Login />
         </div>
-      ) : <Home />}
+      ) : <Home /> }
     </div>
   );
 };

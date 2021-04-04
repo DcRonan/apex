@@ -12,7 +12,7 @@ export const fetchUser = userInfo => dispatch => {
     .then(data => {
       if (data.error) return toast.error('Invalid user');
       localStorage.setItem('token', data.token);
-      return dispatch(setUser(data.data)) && toast.success('You have successfully signed in');
+      return dispatch(setUser(data.data)) && toast.success(`Welcome ${data.data.user.username}!`);
     })
     .catch(err => err);
 };

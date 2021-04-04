@@ -11,3 +11,11 @@
   font-family: 'Nimbus Bold';
   src: local('Nimbus Bold'), url(../fonts/Nimbus-Bold.otf) format('truetype');
 }
+
+input,
+input:focus,
+button,
+button:focus {
+  outline: none;
+  border: none;
+}

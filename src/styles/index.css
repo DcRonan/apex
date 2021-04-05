@@ -12,10 +12,13 @@
   src: local('Nimbus Bold'), url(../fonts/Nimbus-Bold.otf) format('truetype');
 }
 
-input,
-input:focus,
 button,
 button:focus {
   outline: none;
   border: none;
+}
+
+input,
+textarea {
+  @apply px-4 py-1 border-2 rounded-md border-gray-500;
 }

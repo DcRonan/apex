@@ -1,19 +1,14 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
-import { logUserOut } from '../actions';
 import AddSport from './AddSport';
+import Footer from './Footer';
 
-const Home = () => {
-  const dispatch = useDispatch();
-
-  return (
-    <div>
-      <button type="button" onClick={() => dispatch(logUserOut())}>
-        LOG OUT
-      </button>
+const Home = () => (
+  <>
+    <main>
       <AddSport />
-    </div>
-  );
-};
+    </main>
+    <Footer />
+  </>
+);
 
 export default Home;

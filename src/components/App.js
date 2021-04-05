@@ -17,7 +17,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App">
+    <div className="h-screen w-full">
       <ToastContainer />
       {users.loggedIn ? (
         <div>

@@ -51,7 +51,7 @@ const Form = () => {
     nameInput.current.classList = 'block';
     hoursInput.current.classList = 'hidden';
     secondButtons.current.classList = 'hidden';
-    firstButtons.current.classList = 'block';
+    firstButtons.current.classList = 'bg-gray-100 rounded-lg p-2';
     hoursInput.current.classList = 'hidden';
     hourBar.current.classList = 'hidden';
     setTitle('Name of sport');
@@ -60,7 +60,7 @@ const Form = () => {
   const goToSecondPage = () => {
     nameInput.current.classList = 'hidden';
     hoursInput.current.classList = 'block';
-    secondButtons.current.classList = 'block';
+    secondButtons.current.classList = 'flex bg-gray-100 rounded-lg p-2';
     firstButtons.current.classList = 'hidden';
     thirdButtons.current.classList = 'hidden';
     minsInput.current.classList = 'hidden';
@@ -73,7 +73,7 @@ const Form = () => {
     hoursInput.current.classList = 'hidden';
     minsInput.current.classList = 'block';
     secondButtons.current.classList = 'hidden';
-    thirdButtons.current.classList = 'block';
+    thirdButtons.current.classList = 'flex bg-gray-100 rounded-lg p-2';
     fourthButtons.current.classList = 'hidden';
     secondsInput.current.classList = 'hidden';
     minuteBar.current.classList = 'block w-3/4';
@@ -86,7 +86,7 @@ const Form = () => {
     minsInput.current.classList = 'hidden';
     secondsInput.current.classList = 'block';
     thirdButtons.current.classList = 'hidden';
-    fourthButtons.current.classList = 'block';
+    fourthButtons.current.classList = 'flex bg-gray-100 rounded-lg p-2';
     fifthButtons.current.classList = 'hidden';
     distanceInput.current.classList = 'hidden';
     minuteBar.current.classList = 'hidden';
@@ -98,7 +98,7 @@ const Form = () => {
     secondsInput.current.classList = 'hidden';
     distanceInput.current.classList = 'block';
     fourthButtons.current.classList = 'hidden';
-    fifthButtons.current.classList = 'block';
+    fifthButtons.current.classList = 'flex bg-gray-100 rounded-lg p-2';
     sixthButtons.current.classList = 'hidden';
     notesInput.current.classList = 'hidden';
     secondsBar.current.classList = 'hidden';
@@ -110,7 +110,7 @@ const Form = () => {
     distanceInput.current.classList = 'hidden';
     notesInput.current.classList = 'block';
     fifthButtons.current.classList = 'hidden';
-    sixthButtons.current.classList = 'block';
+    sixthButtons.current.classList = 'flex bg-gray-100 rounded-lg p-2';
     distanceBar.current.classList = 'hidden';
     setTitle('Notes');
   };
@@ -130,7 +130,7 @@ const Form = () => {
         <div className="flex flex-col items-center justify-center py-10">
           <section ref={hourBar} className="hidden w-3/4">
             <CircularProgressbar
-              value={minutesValue}
+              value={hoursValue}
               text={`${hoursValue} h`}
             />
           </section>
@@ -213,10 +213,10 @@ const Form = () => {
             onChange={e => setNotes(e.target.value)}
           />
           {/* FIRST */}
-          <div ref={firstButtons}>
+          <div ref={firstButtons} className="bg-gray-100 rounded-lg p-2">
             <button
               type="button"
-              className="p-2 bg-lightgreen text-white"
+              className="p-2 bg-lightgreen text-white w-full rounded-lg"
               onClick={() => goToSecondPage()}
             >
               Next
@@ -226,14 +226,14 @@ const Form = () => {
           <div ref={secondButtons} className="hidden">
             <button
               type="button"
-              className="p-2 bg-red-600 text-white"
+              className="p-3 rounded-lg text-gray-600 w-full"
               onClick={() => goToFirstPage()}
             >
               Prev
             </button>
             <button
               type="button"
-              className="p-2 bg-lightgreen text-white"
+              className="p-3 rounded-lg bg-lightgreen text-white w-full"
               onClick={() => goToThirdPage()}
             >
               Next
@@ -243,14 +243,14 @@ const Form = () => {
           <div ref={thirdButtons} className="hidden">
             <button
               type="button"
-              className="p-2 bg-red-600 text-white"
+              className="p-3 text-grey-600 w-full text-gray-600"
               onClick={() => goToSecondPage()}
             >
               Prev
             </button>
             <button
               type="button"
-              className="p-2 bg-lightgreen text-white"
+              className="p-3 bg-lightgreen text-white w-full rounded-lg"
               onClick={() => goToFourthPage()}
             >
               Next
@@ -260,14 +260,14 @@ const Form = () => {
           <div ref={fourthButtons} className="hidden">
             <button
               type="button"
-              className="p-2 bg-red-600 text-white"
+              className="p-3 rounded-lg text-gray-600 w-full"
               onClick={() => goToThirdPage()}
             >
               Prev
             </button>
             <button
               type="button"
-              className="p-2 bg-lightgreen text-white"
+              className="p-3 bg-lightgreen text-white w-full rounded-lg"
               onClick={() => goToFifthPage()}
             >
               Next
@@ -277,14 +277,14 @@ const Form = () => {
           <div ref={fifthButtons} className="hidden">
             <button
               type="button"
-              className="p-2 bg-red-600 text-white"
+              className="p-3 text-gray-600 w-full"
               onClick={() => goToFourthPage()}
             >
               Prev
             </button>
             <button
               type="button"
-              className="p-2 bg-lightgreen text-white"
+              className="p-3 bg-lightgreen text-white w-full rounded-lg"
               onClick={() => goToSixthPage()}
             >
               Next
@@ -294,14 +294,14 @@ const Form = () => {
           <div ref={sixthButtons} className="hidden">
             <button
               type="button"
-              className="p-2 bg-red-600 text-white"
+              className="p-3 text-gray-600 w-full"
               onClick={() => goToFifthPage()}
             >
               Prev
             </button>
             <button
               type="submit"
-              className="p-2 bg-lightgreen text-white"
+              className="p-3 bg-lightgreen text-white w-full rounded-lg"
               onClick={() => goToSixthPage()}
             >
               Submit

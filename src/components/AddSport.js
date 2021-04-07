@@ -10,6 +10,7 @@ const Form = () => {
   const [hoursValue, setHours] = useState(0);
   const [distanceValue, setDistance] = useState(0);
   const [notesValue, setNotes] = useState('');
+  const [title, setTitle] = useState('Name of sport');
 
   const onSubmit = e => {
     e.preventDefault();
@@ -53,6 +54,7 @@ const Form = () => {
     firstButtons.current.classList = 'block';
     hoursInput.current.classList = 'hidden';
     hourBar.current.classList = 'hidden';
+    setTitle('Name of sport');
   };
 
   const goToSecondPage = () => {
@@ -64,6 +66,7 @@ const Form = () => {
     minsInput.current.classList = 'hidden';
     minuteBar.current.classList = 'hidden';
     hourBar.current.classList = 'flex w-3/4';
+    setTitle('Hours');
   };
 
   const goToThirdPage = () => {
@@ -76,6 +79,7 @@ const Form = () => {
     minuteBar.current.classList = 'block w-3/4';
     hourBar.current.classList = 'hidden';
     secondsBar.current.classList = 'hidden';
+    setTitle('Minutes');
   };
 
   const goToFourthPage = () => {
@@ -88,6 +92,7 @@ const Form = () => {
     minuteBar.current.classList = 'hidden';
     secondsBar.current.classList = 'block w-3/4';
     distanceBar.current.classList = 'hidden';
+    setTitle('Seconds');
   };
   const goToFifthPage = () => {
     secondsInput.current.classList = 'hidden';
@@ -98,6 +103,7 @@ const Form = () => {
     notesInput.current.classList = 'hidden';
     secondsBar.current.classList = 'hidden';
     distanceBar.current.classList = 'block w-3/4';
+    setTitle('Distance');
   };
 
   const goToSixthPage = () => {
@@ -106,6 +112,7 @@ const Form = () => {
     fifthButtons.current.classList = 'hidden';
     sixthButtons.current.classList = 'block';
     distanceBar.current.classList = 'hidden';
+    setTitle('Notes');
   };
 
   return (
@@ -115,9 +122,7 @@ const Form = () => {
       </div>
       <div className="p-4 border-b-2">
         <div>
-          <h3 className="text-base text-gray-600 font-nimbuslight">
-            Name of sport
-          </h3>
+          <h3 className="text-base text-gray-600 font-nimbuslight">{title}</h3>
         </div>
       </div>
       <div className="flex flex-col items-center justify-center space-y-4">

@@ -122,12 +122,12 @@ const Form = () => {
       </div>
       <div className="p-4 border-b-2">
         <div>
-          <h3 className="text-base text-gray-600 font-nimbuslight">{title}</h3>
+          <h3 className="text-base text-gray-500 font-nimbusbold">{title}</h3>
         </div>
       </div>
       <div className="flex flex-col items-center justify-center space-y-4">
         {/* Progress bar */}
-        <div className="flex flex-col items-center justify-center py-10">
+        <div className="flex flex-col items-center justify-center py-10 font-nimbuslight">
           <section ref={hourBar} className="hidden w-3/4">
             <CircularProgressbar
               value={hoursValue}
@@ -156,7 +156,7 @@ const Form = () => {
           </section>
         </div>
         {/* FORM */}
-        <form onSubmit={onSubmit} className="space-y-4 absolute bottom-20">
+        <form onSubmit={onSubmit} className="space-y-4 absolute bottom-20 font-nimbuslight">
           <input
             ref={nameInput}
             type="text"

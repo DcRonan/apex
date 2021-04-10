@@ -47,3 +47,20 @@ export const fetchSport = () => async dispatch => {
     });
   }
 };
+
+export const fetchSingleSport = sport => async dispatch => {
+  try {
+    dispatch({
+      type: 'FETCH_SINGLE_SPORT_REQUEST',
+    });
+
+    dispatch({
+      type: 'FETCH_SINGLE_SPORT_SUCCESS',
+      payload: sport,
+    });
+  } catch (e) {
+    dispatch({
+      type: 'STOCK_SINGLE_LIST_FAIL',
+    });
+  }
+};

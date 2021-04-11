@@ -1,13 +1,11 @@
 import React from 'react';
-// import AddSport from './AddSport';
 import Footer from './Footer';
-import SportList from '../containers/SportList';
+import Routes from '../routes';
 
 const Home = () => (
   <>
     <main>
-      {/* <AddSport /> */}
-      <SportList />
+      <Routes />
     </main>
     <Footer />
   </>

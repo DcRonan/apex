@@ -56,7 +56,7 @@ export const fetchSingleSport = sport => async dispatch => {
 
     dispatch({
       type: 'FETCH_SINGLE_SPORT_SUCCESS',
-      payload: sport,
+      payload: [sport],
     });
   } catch (e) {
     dispatch({

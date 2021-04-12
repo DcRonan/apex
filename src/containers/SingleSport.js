@@ -12,10 +12,15 @@ const SportList = () => {
       </div>
       <section className="space-y-4">
         {singleSport.map(el => (
-          <div key={Math.random().toString(36).substr(2, 9)} className="py-4 px-5 bg-gray-300 bg-opacity-30 border-b-2 border-t-2 flex justify-between items-center">
+          <div
+            key={Math.random().toString(36).substr(2, 9)}
+            className="py-4 px-5 bg-gray-300 bg-opacity-30 border-b-2 border-t-2 flex justify-between items-center"
+          >
             <div>
               <h2 className="font-nimbusbold">{el.name}</h2>
-              <p className="text-xs">{dateFormat(el.created_at, 'yyyy-MM-dd')}</p>
+              <p className="text-xs">
+                {dateFormat(el.created_at, 'yyyy-MM-dd')}
+              </p>
             </div>
             <div className="font-nimbusbold text-green-700">
               {el.distance}

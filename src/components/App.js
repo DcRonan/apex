@@ -19,7 +19,7 @@ const App = () => {
   return (
     <div className="h-screen w-full">
       <ToastContainer />
-      {users.loggedIn ? (
+      {!users.loggedIn ? (
         <div>
           <h1>Sign Up or Login!</h1>
           <SignUp />

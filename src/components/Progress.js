@@ -39,8 +39,7 @@ const Progress = () => {
             styles={buildStyles({
               textSize: '16px',
               pathTransitionDuration: 2,
-              pathColor: `rgb(0,204,0, ${distanceResult / 100})`,
-              textColor: '#97e493',
+              textColor: '#10b981',
               trailColor: '#d6d6d6',
             })}
           />

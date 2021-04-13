@@ -5,7 +5,6 @@ import dateFormat from 'dateformat';
 const SportList = () => {
   const singleSport = useSelector(state => state.singleSport.data);
   const title = singleSport[0].name;
-  console.log(singleSport);
 
   return (
     <div className="h-screen pb-20">

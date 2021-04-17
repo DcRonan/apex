@@ -10,7 +10,7 @@ export const fetchUser = userInfo => dispatch => {
     .post('http://localhost:4000/api/v1/login', userInfo)
     .then(response => response)
     .then(data => {
-      if (data.error) return toast.error('Invalid user');
+      if (data.data.error) return toast.error('Invalid user');
       localStorage.setItem('token', data.token);
       return dispatch(setUser(data.data)) && toast.success(`Welcome ${data.data.user.username}!`);
     })

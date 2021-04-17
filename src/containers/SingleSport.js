@@ -11,11 +11,10 @@ const SportList = () => {
       <div className="p-4 bg-lightblue text-white font-nimbuslight w-full text-center">
         <h1 className="text-2xl">{title}</h1>
       </div>
-      <section className="space-y-6 mx-6 text-center pt-10">
+      <section className="mx-6 text-center pt-10">
         {singleSport.map(el => (
-          <>
+          <div className="space-y-6" key={Math.random().toString(36).substr(2, 9)}>
             <div
-              key={Math.random().toString(36).substr(2, 9)}
               className="py-6 px-5 bg-gray-300 bg-opacity-30 relative"
             >
               <div className="text-xs text-lightgrey font-nimbuslight absolute top-2 left-2">
@@ -60,7 +59,7 @@ const SportList = () => {
                 <div>{dateFormat(el.created_at, 'yyyy-MM-dd')}</div>
               </div>
             </div>
-          </>
+          </div>
         ))}
       </section>
     </div>

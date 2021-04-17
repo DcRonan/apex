@@ -12,7 +12,7 @@ const Routes = () => (
     <Route path="/feed" exact component={SportList} />
     <Route path="/" exact component={AddSport} />
     <Route path="/progress" exact component={Progress} />
-    <Route path="/more" exact component={More} />
+    <Route path="/settings" exact component={More} />
     <Redirect to="/" />
   </Switch>
 );

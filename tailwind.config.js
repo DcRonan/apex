@@ -7,6 +7,7 @@ module.exports = {
         lightgreen: '#97e493',
         lightblue: '#42b5e8',
         lightgrey: '#5b8092',
+        footer: '#313944',
       },
       fontFamily: {
         nimbuslight: ['Nimbus Light', 'cursive'],

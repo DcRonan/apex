@@ -1,7 +1,10 @@
 import React, { useState, useRef } from 'react';
+import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import { toast } from 'react-toastify';
+import { fetchSport } from '../actions';
 
 const Form = () => {
   const [nameValue, setName] = useState('');
@@ -11,6 +14,8 @@ const Form = () => {
   const [distanceValue, setDistance] = useState(0);
   const [notesValue, setNotes] = useState('');
   const [title, setTitle] = useState('Name of sport');
+
+  const dispatch = useDispatch();
 
   const onSubmit = e => {
     e.preventDefault();
@@ -23,6 +28,9 @@ const Form = () => {
       distance: distanceValue,
       notes: notesValue,
     });
+
+    dispatch(fetchSport());
+    toast.success(`You successfully created ${nameValue}`);
   };
 
   // Inputs

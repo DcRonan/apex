@@ -24,7 +24,7 @@ export const signUserUp = userInfo => dispatch => {
     .then(data => {
       localStorage.setItem('token', data.token);
 
-      if (data.error) return toast.error('Error, try again');
+      if (data.data.error) return toast.error('Error, try again');
       return dispatch(setUser(data.data)) && toast.success('You have successfully registered');
     })
     .catch(err => err);

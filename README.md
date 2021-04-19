@@ -32,12 +32,9 @@ You have options to create a user account with a username and password, create a
 ## Built With 🛠
 
 ```
-- Ruby on Rails
 - React.js
 - Rails API
-- Ruby
 - JavaScript
-- PostgreSQL
 - Redux
 - Tailwind CSS
 - Heroku
@@ -45,17 +42,14 @@ You have options to create a user account with a username and password, create a
 ```
 
 ![React](https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=React&logoColor=white&labelColor=000)
-![Ruby](https://img.shields.io/badge/-Ruby-CC342D?style=for-the-badge&logo=Ruby&logoColor=white&labelColor=000)
 ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white&labelColor=000)
-![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?style=for-the-badge&logo=PostgreSQL&logoColor=white&labelColor=000)
 ![Redux](https://img.shields.io/badge/-Redux-764ABC?style=for-the-badge&logo=Redux&logoColor=white&labelColor=000)
 ![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-38B2AC?style=for-the-badge&logo=Tailwind-CSS&logoColor=white&labelColor=000)
 ![npm](https://img.shields.io/badge/-npm-CB3837?style=for-the-badge&logo=npm&logoColor=white&labelColor=000)
-![Heroku](https://img.shields.io/badge/-Heroku-430098?style=for-the-badge&logo=Heroku&logoColor=white&labelColor=000)
 ![VS Code](https://img.shields.io/badge/-VS_Code-007ACC?style=for-the-badge&logo=Visual-Studio-Code&logoColor=white&labelColor=000)
 ## Live Demo 🎥
 
-<a href="https://app.netlify.com/start/repos">Live Demo</a>
+<a href="https://deploy-preview-1--heuristic-lalande-76e9dd.netlify.app/">Live Demo</a>
 
 ## Install ⏳
 

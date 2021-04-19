@@ -4,7 +4,7 @@ describe('Sport reducer', () => {
   it('should return the initial state', () => {
     expect(reducer(undefined, {})).toEqual({
       loading: false,
-      data: {},
+      data: [{}],
       errorMsg: '',
     });
   });

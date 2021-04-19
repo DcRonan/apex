@@ -7,7 +7,7 @@ export const logUserOut = () => ({ type: 'LOG_OUT' });
 
 export const fetchUser = userInfo => dispatch => {
   axios
-    .post('http://localhost:4000/api/v1/login', userInfo)
+    .post('https://apex-sport-tracker.herokuapp.com/api/v1/login', userInfo)
     .then(response => response)
     .then(data => {
       if (data.data.error) return toast.error('Invalid user');
@@ -19,7 +19,7 @@ export const fetchUser = userInfo => dispatch => {
 
 export const signUserUp = userInfo => dispatch => {
   axios
-    .post('http://localhost:4000/api/v1/users', userInfo)
+    .post('https://apex-sport-tracker.herokuapp.com/api/v1/users', userInfo)
     .then(response => response)
     .then(data => {
       localStorage.setItem('token', data.token);
@@ -35,7 +35,7 @@ export const fetchSport = () => async dispatch => {
     dispatch({
       type: 'FETCH_SPORT_REQUEST',
     });
-    const response = await axios.get('http://localhost:4000/api/v1/sports');
+    const response = await axios.get('https://apex-sport-tracker.herokuapp.com/api/v1/sports');
 
     dispatch({
       type: 'FETCH_SPORT_SUCCESS',

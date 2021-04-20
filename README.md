@@ -19,13 +19,9 @@
 
 > I have built an app that lets you track your sports & fitness workouts that uses a Rails API that I built.
 
-<style>
-.images {width: 200px}
-</style>
-
-<img class="images" src="./assets/main-sc-1.png">
-<img class="images" src="./assets/main-sc-2.png">
-<img class="images" src="./assets/main-sc-3.png">
+<img class="images" src="./assets/main-sc-1.jpg">
+<img class="images" src="./assets/main-sc-2.jpg">
+<img class="images" src="./assets/main-sc-3.jpg">
 
 You have options to create a user account with a username and password, create a sport with multiple options and progress to track all your data etc.
 

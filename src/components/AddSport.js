@@ -20,7 +20,7 @@ const Form = () => {
   const onSubmit = e => {
     e.preventDefault();
 
-    axios.post('http://localhost:4000/api/v1/sports', {
+    axios.post('https://apex-sport-tracker.herokuapp.com/api/v1/sports', {
       name: nameValue,
       minutes: minutesValue,
       seconds: secondsValue,

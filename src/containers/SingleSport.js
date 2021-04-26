@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import dateFormat from 'dateformat';
+import { Link } from 'react-router-dom';
 
 const SportList = () => {
   const singleSport = useSelector(state => state.singleSport.data);
@@ -59,6 +60,9 @@ const SportList = () => {
                 <div>{dateFormat(el.created_at, 'yyyy-MM-dd')}</div>
               </div>
             </div>
+            <Link to={`/sports/${el.id}/edit`}>
+              <button type="button" className="rounded-md w-full py-4 px-2 mt-5 bg-lightgreen hover:bg-lightblue hover:text-white">EDIT</button>
+            </Link>
           </div>
         ))}
       </section>

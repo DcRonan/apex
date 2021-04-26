@@ -1,10 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const Footer = () => (
+const Footer = ({
+  home, feed, progress, settings,
+}) => (
   <footer className="bg-footer bg-opacity-80 bottom-0 fixed w-full flex justify-between shadow-md border-t border-blue-900">
     <div className="border-r w-1/4 flex items-center justify-center py-3">
-      <Link to="/">
+      <Link to={home}>
         <svg
           className="h-8"
           xmlns="http://www.w3.org/2000/svg"
@@ -18,7 +21,7 @@ const Footer = () => (
       </Link>
     </div>
     <div className="w-1/4 flex items-center justify-center border-r">
-      <Link to="/feed">
+      <Link to={feed}>
         <svg
           className="h-8"
           xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +33,7 @@ const Footer = () => (
       </Link>
     </div>
     <div className="w-1/4 flex items-center justify-center border-r">
-      <Link to="/progress">
+      <Link to={progress}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 64 64"
@@ -48,7 +51,7 @@ const Footer = () => (
       </Link>
     </div>
     <div className="w-1/4 flex items-center justify-center">
-      <Link to="/settings">
+      <Link to={settings}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-8"
@@ -69,3 +72,17 @@ const Footer = () => (
 );
 
 export default Footer;
+
+Footer.defaultProps = {
+  home: '',
+  feed: '',
+  progress: '',
+  settings: '',
+};
+
+Footer.propTypes = {
+  home: PropTypes.string,
+  feed: PropTypes.string,
+  progress: PropTypes.string,
+  settings: PropTypes.string,
+};

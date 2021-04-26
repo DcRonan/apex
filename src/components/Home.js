@@ -7,7 +7,7 @@ const Home = () => (
     <main>
       <Routes />
     </main>
-    <Footer />
+    <Footer home="/" feed="/feed" progress="/progress" settings="/settings" />
   </>
 );
 

@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`checks if Home component renders correctly should render correctly 1`] = `
+<div
+  className="h-screen flex flex-col justify-center items-center bg-lightblue"
+>
+  <div
+    className="mb-10"
+  >
+    <h1
+      className="font-nimbusbold text-4xl italic text-gray-700"
+    >
+      APEX
+    </h1>
+  </div>
+  <div
+    className="px-16 w-full"
+  >
+    <form
+      className="flex flex-col space-y-3 font-nimbuslight"
+      onSubmit={[Function]}
+    >
+      <input
+        className="px-3 py-2 focus:border-green-500 focus:outline-none"
+        name="username"
+        onChange={[Function]}
+        placeholder="Username"
+        type="text"
+        value=""
+      />
+      <input
+        className="px-3 py-2 focus:border-4 focus:border-green-500 focus:outline-none"
+        name="password"
+        onChange={[Function]}
+        placeholder="Password"
+        type="password"
+        value=""
+      />
+      <input
+        className="px-3 py-2 bg-green-500 text-white border-0 focus:outline-none"
+        type="submit"
+        value="Login"
+      />
+    </form>
+  </div>
+</div>
+`;

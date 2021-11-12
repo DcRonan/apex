@@ -45,7 +45,7 @@ You have options to create a user account with a username and password, create a
 ![VS Code](https://img.shields.io/badge/-VS_Code-007ACC?style=for-the-badge&logo=Visual-Studio-Code&logoColor=white&labelColor=000)
 ## Live Demo 🎥
 
-<a href="https://deploy-preview-1--heuristic-lalande-76e9dd.netlify.app/">Live Demo</a>
+<a href="https://apex-sport-tracker.netlify.app/">Live Demo</a>
 
 ## Install ⏳
 
